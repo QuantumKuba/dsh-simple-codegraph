@@ -1,0 +1,11 @@
+# Cordis bundle patch for dsh-simple-codegraph
+# Gives each DeepSeek Harness Agent an isolated, project-scoped CodeGraph MCP connection.
+
+- insert:
+    - id: dsh-simple-codegraph
+      name: dsh-simple-codegraph
+      config:
+        command: codegraph
+        toolCallTimeoutMs: 60000
+        failOnStartupError: false
+        routingHint: true
